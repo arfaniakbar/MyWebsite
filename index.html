@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Akbar Company — Profil Perusahaan (Handmade)</title>
+  <meta name="description" content="Akbar Company — solusi desain & teknologi, handcrafted website.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">
+        <div class="logo">AK</div>
+        <div class="brand-text">
+          <div class="name">Akbar Company</div>
+          <div class="slogan">Desain • Web • Strategi</div>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#home" class="nav-link">Beranda</a>
+        <a href="#about" class="nav-link">Tentang</a>
+        <a href="#services" class="nav-link">Layanan</a>
+        <a href="#portfolio" class="nav-link">Portofolio</a>
+        <a href="#contact" class="nav-link">Kontak</a>
+      </nav>
+
+      <div class="nav-controls">
+        <button id="bgOpen" class="icon-btn" title="Ganti background">🎨</button>
+        <button id="themeToggle" class="icon-btn" title="Ganti tema">🌙</button>
+        <button id="hamburger" class="hamburger" aria-label="Menu">☰</button>
+      </div>
+    </div>
+
+    <!-- menu mobile -->
+    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+      <a href="#home" class="mobile-link">Beranda</a>
+      <a href="#about" class="mobile-link">Tentang</a>
+      <a href="#services" class="mobile-link">Layanan</a>
+      <a href="#portfolio" class="mobile-link">Portofolio</a>
+      <a href="#contact" class="mobile-link">Kontak</a>
+    </div>
+  </header>
+
+  <!-- CONTROL PANEL (background selector) -->
+  <aside id="bgPanel" class="bg-panel" aria-hidden="true">
+    <h4>Ganti Background</h4>
+    <div class="bg-options">
+      <button data-type="image" data-src="https://images.unsplash.com/photo-1503424886309-7f3a3c7d5d6b?q=80&w=1600&auto=format&fit=crop">Gambar 1</button>
+      <button data-type="image" data-src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop">Gambar 2</button>
+      <button data-type="gradient" data-src="linear-gradient(135deg,#ff9a9e 0%, #fad0c4 100%)">Gradien Pastel</button>
+      <button data-type="pattern" data-src="pattern-1">Polkadot</button>
+      <button data-type="reset">Reset Default</button>
+    </div>
+    <small class="muted">Background hero dapat diganti — untuk tampilan handmade gunakan pola atau gradien.</small>
+  </aside>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div id="heroBg" class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-decor">
+      <!-- custom SVG shapes for handmade feel -->
+      <svg class="shape-left" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#fff" opacity="0.06" d="M44.1,-54.6C58.8,-50.9,73.6,-43.7,77.3,-33.2C81.1,-22.8,73.9,-9.1,66.3,5.1C58.8,19.3,50.8,33.9,39.9,42.4C28.9,51,14.5,53.6,-0.6,54.5C-15.7,55.4,-31.4,54.5,-44.1,48.5C-56.8,42.5,-66.6,31.5,-68.1,19.2C-69.6,6.9,-62.8,-6.8,-55.3,-20.1C-47.9,-33.4,-39.8,-46.3,-28,-54.7C-16.2,-63.1,-0.7,-67,12.5,-68C25.7,-69,38.6,-67.5,44.1,-54.6Z" transform="translate(100 100)" />
+      </svg>
+    </div>
+
+    <div class="hero-inner container">
+      <div class="hero-left">
+        <h1 class="hero-title"><span id="typed"></span><span class="cursor">|</span></h1>
+        <p class="hero-sub">Kami merancang & membangun produk digital — dengan sentuhan handmade dan strategi yang nyata.</p>
+        <div class="hero-cta">
+          <a href="#portfolio" class="btn primary">Lihat Portofolio</a>
+          <a href="#contact" class="btn ghost">Hubungi Kami</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="card glass">
+          <h4>Quick facts</h4>
+          <ul>
+            <li><strong>2016</strong> — Berdiri</li>
+            <li><strong>200+</strong> — Proyek</li>
+            <li><strong>95%</strong> — Kepuasan Klien</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- ABOUT -->
+    <section id="about" class="section reveal">
+      <div class="container about-grid">
+        <div class="about-card card">
+          <h3>Tentang Akbar Company</h3>
+          <p>Kami adalah studio kecil yang mengutamakan kualitas, bukan kuantitas. Seluruh desain & pengembangan dibuat dengan cermat, tanpa bergantung pada aset stok generik.</p>
+          <p class="muted">Pendekatan: riset → prototipe → uji → iterasi.</p>
+        </div>
+        <div class="about-visual card glass">
+          <div class="visual-block">handmade</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section reveal">
+      <div class="container">
+        <h3 class="section-title">Layanan Utama</h3>
+        <div class="services-grid">
+          <article class="service card">
+            <div class="icon">🎨</div>
+            <h4>Desain UI/UX</h4>
+            <p>Desain yang ramah pengguna & estetis, dibuat khusus.</p>
+          </article>
+          <article class="service card">
+            <div class="icon">💻</div>
+            <h4>Pengembangan Web</h4>
+            <p>Frontend cepat dan backend dapat diskalakan.</p>
+          </article>
+          <article class="service card">
+            <div class="icon">📈</div>
+            <h4>Strategi Produk</h4>
+            <p>Validasi ide, roadmap, dan KPI.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section reveal">
+      <div class="container">
+        <h3 class="section-title">Portofolio Pilihan</h3>
+        <div class="portfolio-grid">
+          <div class="project card" data-title="Aplikasi Marketplace" data-desc="Desain & pengembangan marketplace B2C" data-img="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
+            <div class="thumb">MP</div>
+            <div class="proj-info"><strong>Aplikasi Marketplace</strong><span>— B2C platform</span></div>
+          </div>
+          <div class="project card" data-title="Branding & Website" data-desc="Restyle brand & marketing site" data-img="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200&auto=format&fit=crop">
+            <div class="thumb">BR</div>
+            <div class="proj-info"><strong>Branding & Website</strong><span>— Corporate site</span></div>
+          </div>
+          <div class="project card" data-title="Aplikasi Mobile" data-desc="App ordering makanan" data-img="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
+            <div class="thumb">MB</div>
+            <div class="proj-info"><strong>Aplikasi Mobile</strong><span>— Food delivery</span></div>
+          </div>
+          <div class="project card" data-title="Dashboard Analytics" data-desc="Realtime dashboard & visualisasi" data-img="https://images.unsplash.com/photo-1564866657310-2b2f0f21f0b4?q=80&w=1200&auto=format&fit=crop">
+            <div class="thumb">DA</div>
+            <div class="proj-info"><strong>Dashboard Analytics</strong><span>— Data viz</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- lightbox -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+      <div class="lb-inner">
+        <button id="lbClose" class="lb-close">✕</button>
+        <img id="lbImg" src="" alt="">
+        <div class="lb-meta">
+          <h4 id="lbTitle"></h4>
+          <p id="lbDesc"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section reveal">
+      <div class="container contact-grid">
+        <div class="contact-card card">
+          <h3>Hubungi Kami</h3>
+          <p class="muted">Kirim pesan, kami akan membalas dalam 1–2 hari kerja.</p>
+          <form id="contactForm">
+            <label>Nama</label>
+            <input id="cfName" name="name" required />
+            <label>Email</label>
+            <input id="cfEmail" name="email" type="email" required />
+            <label>Pesan</label>
+            <textarea id="cfMsg" name="message" rows="5" required></textarea>
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Kirim Pesan</button>
+              <button type="button" id="formReset" class="btn ghost">Reset</button>
+            </div>
+            <div id="formToast" class="toast" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <aside class="contact-info card glass">
+          <h4>Info Kontak</h4>
+          <p>Jakarta, Indonesia</p>
+          <p>akbar@example.com</p>
+          <p>+62 812 3456 7890</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram">IG</a> • <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BACK TO TOP -->
+  <button id="backTop" class="back-top" title="Kembali ke atas">↑</button>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <strong>Akbar Company</strong> — handcrafted by Akbar</div>
+      <div class="muted">Made with care — no stock people used.</div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
