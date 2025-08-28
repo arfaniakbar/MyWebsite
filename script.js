@@ -52,7 +52,7 @@ window.addEventListener('scroll', () => {
 /* TYPING EFFECT (hero) */
 const typedEl = $('#typed');
 const phrases = [
-  "Membangun website modern, cepat, dan responsif TES",
+  "Membangun website modern, cepat, dan responsif",
   "Menghadirkan solusi digital yang kreatif dan inovatif",
   "Membantu bisnis Anda tampil lebih profesional di dunia online",
   "Desain elegan dipadukan dengan strategi digital efektif",
@@ -198,4 +198,5 @@ document.addEventListener('keydown', (e) => {
     mobileMenu.style.display = 'none';
   }
 });
+
 
