@@ -125,24 +125,51 @@ body {
   font-size: 20px;
 }
 
-/* mobile menu */
+/* Mobile menu hidden by default */
 .mobile-menu {
   display: none;
+  flex-direction: column;
+  gap: 10px;
   position: absolute;
-  top: 68px;
-  right: 18px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  top: 60px;
+  right: 16px;
+  background: rgba(0,0,0,0.9);
+  padding: 16px;
+  border-radius: 8px;
+  width: 200px;
 }
 
 .mobile-menu a {
-  display: block;
-  padding: 8px 10px;
-  color: var(--muted);
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
   text-decoration: none;
 }
+
+.mobile-menu a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Show hamburger only on mobile */
+@media (max-width: 980px) {
+  .main-nav {
+    display: none;
+  }
+  .hamburger {
+    display: inline-block;
+    font-size: 26px;
+    cursor: pointer;
+  }
+}
+
+/* Desktop: normal nav tetap muncul */
+@media (min-width: 981px) {
+  .hamburger,
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
 
 /* BG panel */
 .bg-panel {
@@ -512,3 +539,4 @@ body {
     gap: 16px;
   }
 }
+
