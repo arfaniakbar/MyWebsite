@@ -8,54 +8,38 @@
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>Wisata Banjarmasin</h1>
-      <div id="menu-toggle">☰</div>
-      <nav>
-        <ul id="navbar">
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="tentang.html">Tentang</a></li>
-          <li><a href="destinasi.html" class="active">Destinasi</a></li>
-          <li><a href="berita.html">Berita</a></li>
-          <li><a href="kontak.html">Kontak</a></li>
-        </ul>
-      </nav>
-    </div>
+    <div class="logo">Wisata Banjarmasin</div>
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="destinasi.html" class="active">Destinasi</a></li>
+        <li><a href="berita.html">Berita</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
   </header>
 
-  <main>
-    <section class="content">
-      <h2>Destinasi Wisata Populer</h2>
-      <div class="destinasi-container">
-        <div class="card" onclick="openMap('https://maps.app.goo.gl/KX6WBm8wEJ2z8VhQ6')">
-          <img src="https://source.unsplash.com/400x300/?floating,market" alt="Pasar Terapung">
-          <div class="card-content">
-            <h3>Pasar Terapung Lok Baintan</h3>
-            <p>Pasar tradisional unik yang berada di atas sungai.</p>
-          </div>
-        </div>
-        <div class="card" onclick="openMap('https://maps.app.goo.gl/nDnZk9zH3yQYZjXY9')">
-          <img src="https://source.unsplash.com/400x300/?island,river" alt="Pulau Kembang">
-          <div class="card-content">
-            <h3>Pulau Kembang</h3>
-            <p>Pulau kecil di tengah Sungai Barito dengan habitat monyet ekor panjang.</p>
-          </div>
-        </div>
-        <div class="card" onclick="openMap('https://maps.app.goo.gl/DfS8FjvMQVzP4XfF7')">
-          <img src="https://source.unsplash.com/400x300/?mosque,indonesia" alt="Masjid Sultan Suriansyah">
-          <div class="card-content">
-            <h3>Masjid Sultan Suriansyah</h3>
-            <p>Masjid bersejarah yang menjadi ikon religius di Banjarmasin.</p>
-          </div>
-        </div>
+  <section class="destinasi">
+    <h2>Daftar Destinasi</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Pasar_Terapung_Muara_Kuin.jpg" alt="Pasar Terapung">
+        <h3>Pasar Terapung</h3>
+        <p>Pasar tradisional di atas sungai yang terkenal di Banjarmasin.</p>
       </div>
-    </section>
-  </main>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Masjid_Sultan_Suriansyah.jpg" alt="Masjid Sultan Suriansyah">
+        <h3>Masjid Sultan Suriansyah</h3>
+        <p>Masjid bersejarah peninggalan Kesultanan Banjar.</p>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>© 2025 Wisata Banjarmasin. All rights reserved.</p>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
