@@ -3,42 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wisata Banjarmasin</title>
+  <title>Wisata Banjarmasin - Beranda</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
   <header>
-    <div class="container navbar-container">
-      <h1 class="logo">Wisata Banjarmasin</h1>
-      <nav id="navbar">
-        <a href="index.html" class="active">Beranda</a>
-        <a href="tentang.html">Tentang</a>
-        <a href="destinasi.html">Destinasi</a>
-        <a href="berita.html">Berita</a>
-        <a href="kontak.html">Kontak</a>
+    <div class="container">
+      <h1>Wisata Banjarmasin</h1>
+      <div id="menu-toggle">☰</div>
+      <nav>
+        <ul id="navbar">
+          <li><a href="index.html" class="active">Beranda</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="destinasi.html">Destinasi</a></li>
+          <li><a href="berita.html">Berita</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
       </nav>
-      <button id="menu-toggle">&#9776;</button>
     </div>
   </header>
 
   <main>
-    <section class="content">
+    <section class="hero">
       <h2>Selamat Datang di Wisata Banjarmasin</h2>
-      <p>Banjarmasin, dikenal sebagai Kota Seribu Sungai, menawarkan beragam destinasi wisata mulai dari pasar terapung, wisata kuliner khas Banjar, hingga wisata alam yang menawan.</p>
-      <p>Temukan informasi lengkap tentang destinasi, berita terbaru, serta tips wisata agar perjalanan Anda di Banjarmasin semakin berkesan.</p>
+      <p>Temukan keindahan alam, budaya, dan kuliner khas di Kota Seribu Sungai.</p>
     </section>
 
     <section class="content">
-      <h2>Berita Terkini</h2>
-      <div class="news">
-        <div class="news-item">
-          <h3>Festival Pasar Terapung 2025</h3>
-          <p>Acara tahunan yang menampilkan budaya khas sungai Banjar dengan pertunjukan seni, kuliner, dan pameran UMKM lokal.</p>
+      <h2>Berita Terbaru</h2>
+      <div class="destinasi-container">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x300/?river,boat" alt="Pasar Terapung">
+          <div class="card-content">
+            <h3>Festival Pasar Terapung 2025</h3>
+            <p>Acara tahunan yang memperkenalkan budaya sungai khas Banjarmasin...</p>
+          </div>
         </div>
-        <div class="news-item">
-          <h3>Peningkatan Fasilitas Wisata Sungai</h3>
-          <p>Pemerintah kota Banjarmasin resmi meresmikan jalur wisata sungai baru dengan perahu modern dan dermaga ramah lingkungan.</p>
+        <div class="card">
+          <img src="https://source.unsplash.com/400x300/?food,indonesia" alt="Kuliner">
+          <div class="card-content">
+            <h3>Kuliner Khas Banjar</h3>
+            <p>Wisatawan mancanegara antusias mencoba Soto Banjar & makanan khas lainnya...</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://source.unsplash.com/400x300/?culture,indonesia" alt="Budaya Banjar">
+          <div class="card-content">
+            <h3>Budaya Banjar Mendunia</h3>
+            <p>Pemerintah kota menggelar pameran budaya Banjar di tingkat internasional...</p>
+          </div>
         </div>
       </div>
     </section>
