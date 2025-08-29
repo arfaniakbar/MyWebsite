@@ -2,12 +2,11 @@
 const menuToggle = document.getElementById("menu-toggle");
 const navbar = document.getElementById("navbar");
 
-// Toggle menu untuk mobile
 menuToggle.addEventListener("click", () => {
   navbar.classList.toggle("active");
 });
 
-// Tutup navbar otomatis setelah klik link (di mobile)
+// Tutup navbar otomatis setelah klik link (mobile)
 const navLinks = document.querySelectorAll("#navbar a");
 navLinks.forEach(link => {
   link.addEventListener("click", () => {
