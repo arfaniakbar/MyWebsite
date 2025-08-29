@@ -8,30 +8,38 @@
 </head>
 <body>
   <header>
-    <div class="container navbar-container">
-      <h1 class="logo">Wisata Banjarmasin</h1>
-      <nav id="navbar">
-        <a href="index.html">Beranda</a>
-        <a href="tentang.html">Tentang</a>
-        <a href="destinasi.html">Destinasi</a>
-        <a href="berita.html" class="active">Berita</a>
-        <a href="kontak.html">Kontak</a>
+    <div class="container">
+      <h1>Wisata Banjarmasin</h1>
+      <div id="menu-toggle">☰</div>
+      <nav>
+        <ul id="navbar">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="destinasi.html">Destinasi</a></li>
+          <li><a href="berita.html" class="active">Berita</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
       </nav>
-      <button id="menu-toggle">&#9776;</button>
     </div>
   </header>
 
   <main>
     <section class="content">
       <h2>Berita Wisata</h2>
-      <div class="news">
-        <div class="news-item">
-          <h3>Banjarmasin Raih Penghargaan Kota Wisata Sungai Terbaik</h3>
-          <p>Penghargaan ini diberikan atas upaya kota dalam menjaga ekosistem sungai dan mengembangkan wisata berbasis sungai.</p>
+      <div class="destinasi-container">
+        <div class="card">
+          <img src="https://source.unsplash.com/400x300/?festival,indonesia" alt="Festival Sungai">
+          <div class="card-content">
+            <h3>Festival Sungai Internasional</h3>
+            <p>Banjarmasin akan menjadi tuan rumah festival sungai tingkat dunia tahun ini.</p>
+          </div>
         </div>
-        <div class="news-item">
-          <h3>Kuliner Khas Banjar Go International</h3>
-          <p>Masakan khas Banjar mulai dikenal di dunia internasional setelah diperkenalkan pada festival kuliner Asia 2025.</p>
+        <div class="card">
+          <img src="https://source.unsplash.com/400x300/?tourism,indonesia" alt="Pariwisata">
+          <div class="card-content">
+            <h3>Lonjakan Wisatawan</h3>
+            <p>Jumlah kunjungan wisatawan meningkat 40% selama liburan akhir tahun 2024.</p>
+          </div>
         </div>
       </div>
     </section>
