@@ -5,13 +5,12 @@ const $ = sel => document.querySelector(sel);
 const $$ = sel => Array.from(document.querySelectorAll(sel));
 
 /* NAV mobile toggle */
-const hamburger = $('#hamburger');
-const mobileMenu = $('#mobileMenu');
 hamburger?.addEventListener('click', () => {
-  const open = mobileMenu.getAttribute('aria-hidden') === 'false';
-  mobileMenu.style.display = open ? 'none' : 'block';
+  mobileMenu.classList.toggle('show');
+  const open = mobileMenu.classList.contains('show');
   mobileMenu.setAttribute('aria-hidden', String(!open));
 });
+
 $$('.mobile-link').forEach(a => a.addEventListener('click', ()=> {
   mobileMenu.style.display = 'none';
 }));
@@ -198,6 +197,7 @@ document.addEventListener('keydown', (e) => {
     mobileMenu.style.display = 'none';
   }
 });
+
 
 
 
