@@ -7,42 +7,48 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
-    <div class="logo">Wisata Banjarmasin</div>
+    <h1>Wisata Banjarmasin</h1>
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav>
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="tentang.html">Tentang</a></li>
-        <li><a href="destinasi.html" class="active">Destinasi</a></li>
-        <li><a href="berita.html">Berita</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-      </ul>
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="destinasi.html" class="active">Destinasi</a>
+      <a href="berita.html">Berita</a>
+      <a href="kontak.html">Kontak</a>
     </nav>
   </header>
 
-  <section class="destinasi">
-    <h2>Destinasi Populer</h2>
-    <div class="grid">
-      <a href="https://maps.app.goo.gl/qb9k9p4dpdUQd2vQA" target="_blank" class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Pasar_Terapung_Banjarmasin.jpg">
-        <h3>Pasar Terapung</h3>
-        <p>Pasar unik di atas sungai dengan perahu sebagai tempat jual beli.</p>
-      </a>
-      <a href="https://maps.app.goo.gl/BnXqY8dX1j1A5P1j7" target="_blank" class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Masjid_Sultan_Suriansyah_Banjarmasin.jpg">
+  <main>
+    <h2>Destinasi Wisata Populer</h2>
+    <div class="destinasi-grid">
+      <div class="card">
+        <h3>Pasar Terapung Lok Baintan</h3>
+        <p>Pasar tradisional di atas sungai, ikonik khas Banjarmasin.</p>
+        <a href="https://maps.google.com/?q=Pasar+Terapung+Lok+Baintan" target="_blank">Lihat di Maps</a>
+      </div>
+      <div class="card">
+        <h3>Siring Tendean</h3>
+        <p>Wisata tepi sungai yang indah dengan spot foto menarik.</p>
+        <a href="https://maps.google.com/?q=Siring+Tendean+Banjarmasin" target="_blank">Lihat di Maps</a>
+      </div>
+      <div class="card">
         <h3>Masjid Sultan Suriansyah</h3>
-        <p>Masjid bersejarah peninggalan Kesultanan Banjar.</p>
-      </a>
-      <a href="https://maps.app.goo.gl/syP3uGth19w3XEvj6" target="_blank" class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Museum_Wasitah_Banjarmasin.jpg">
-        <h3>Museum Wasitah</h3>
-        <p>Museum yang menyimpan koleksi budaya Banjar dan sejarah lokal.</p>
-      </a>
+        <p>Masjid bersejarah yang megah, peninggalan kerajaan Banjar.</p>
+        <a href="https://maps.google.com/?q=Masjid+Sultan+Suriansyah" target="_blank">Lihat di Maps</a>
+      </div>
     </div>
-  </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Wisata Banjarmasin. All rights reserved.</p>
+    © 2025 Wisata Banjarmasin. All rights reserved.
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
