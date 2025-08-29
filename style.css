@@ -479,13 +479,60 @@ body {
 }
 
 /* RESPONSIVE */
-@media (max-width: 980px) {
-  .hero-inner { flex-direction: column; gap: 20px; padding: 60px 0; }
-  .about-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .main-nav { display: none; }
-  .hamburger { display: inline-block; }
-  .hero-right { width: 100%; }
-  .lb-inner { grid-template-columns: 1fr; }
-  .mobile-menu { display: block; }
+/* Untuk layar kecil (HP) */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  .container {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .dropzone {
+    padding: 30px 20px;
+    font-size: 0.9rem;
+  }
+
+  .dz-preview {
+    width: 100%;
+    flex-direction: column;   /* biar preview tetap rapi ke bawah */
+    height: auto;
+    margin: 8px 0;
+  }
+
+  .dz-image img {
+    height: auto;
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+  }
+
+  .caption-input {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .custom-remove-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+
+  #generateBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  #mobileUploadBtn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+  }
 }
+
