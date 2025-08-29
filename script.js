@@ -1,26 +1,17 @@
-// Navbar mobile toggle
+// === Navbar Mobile Toggle ===
 const menuToggle = document.getElementById("menu-toggle");
 const navbar = document.getElementById("navbar");
 
 menuToggle.addEventListener("click", () => {
-  navbar.classList.toggle("active");
-});
-
-// Tutup navbar otomatis setelah klik link (mobile)
-const navLinks = document.querySelectorAll("#navbar a");
-navLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    if (window.innerWidth <= 768) {
-      navbar.classList.remove("active");
-    }
-  });
-});
-
-// Buka Google Maps dari destinasi
-function openMap(url) {
-  if (url && url.startsWith("http")) {
-    window.open(url, "_blank");
+  // Jika menu terlihat → sembunyikan, kalau tersembunyi → tampilkan
+  if (navbar.style.display === "block") {
+    navbar.style.display = "none";
   } else {
-    console.error("URL Google Maps tidak valid:", url);
+    navbar.style.display = "block";
   }
+});
+
+// === Buka Google Maps dari Destinasi ===
+function openMap(url) {
+  window.open(url, "_blank"); // buka link di tab baru
 }
