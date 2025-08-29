@@ -7,46 +7,38 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header>
-    <h1>Wisata Banjarmasin</h1>
-    <div class="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="container navbar-container">
+      <h1 class="logo">Wisata Banjarmasin</h1>
+      <nav id="navbar">
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="destinasi.html">Destinasi</a>
+        <a href="berita.html" class="active">Berita</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+      <button id="menu-toggle">&#9776;</button>
     </div>
-    <nav>
-      <a href="index.html">Beranda</a>
-      <a href="tentang.html">Tentang</a>
-      <a href="destinasi.html">Destinasi</a>
-      <a href="berita.html" class="active">Berita</a>
-      <a href="kontak.html">Kontak</a>
-    </nav>
   </header>
 
   <main>
-    <h2>Berita Terbaru</h2>
-    <div class="news-list">
-      <article>
-        <h3>Festival Pasar Terapung 2025 Resmi Dibuka</h3>
-        <p>Banjarmasin kembali meriah dengan Festival Pasar Terapung yang dihadiri ribuan wisatawan domestik dan mancanegara.</p>
-        <a href="#">Baca selengkapnya</a>
-      </article>
-      <article>
-        <h3>Peningkatan Fasilitas Wisata di Siring Tendean</h3>
-        <p>Pemerintah Kota Banjarmasin menambah fasilitas baru seperti area kuliner dan taman bermain di kawasan wisata ini.</p>
-        <a href="#">Baca selengkapnya</a>
-      </article>
-      <article>
-        <h3>Masjid Sultan Suriansyah Jadi Destinasi Religi Populer</h3>
-        <p>Banyak wisatawan religi yang datang berziarah dan menikmati keindahan arsitektur bersejarah.</p>
-        <a href="#">Baca selengkapnya</a>
-      </article>
-    </div>
+    <section class="content">
+      <h2>Berita Wisata</h2>
+      <div class="news">
+        <div class="news-item">
+          <h3>Banjarmasin Raih Penghargaan Kota Wisata Sungai Terbaik</h3>
+          <p>Penghargaan ini diberikan atas upaya kota dalam menjaga ekosistem sungai dan mengembangkan wisata berbasis sungai.</p>
+        </div>
+        <div class="news-item">
+          <h3>Kuliner Khas Banjar Go International</h3>
+          <p>Masakan khas Banjar mulai dikenal di dunia internasional setelah diperkenalkan pada festival kuliner Asia 2025.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
-    © 2025 Wisata Banjarmasin. All rights reserved.
+    <p>© 2025 Wisata Banjarmasin. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
