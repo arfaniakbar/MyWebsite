@@ -5,11 +5,24 @@ const $ = sel => document.querySelector(sel);
 const $$ = sel => Array.from(document.querySelectorAll(sel));
 
 /* NAV mobile toggle */
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
 hamburger?.addEventListener('click', () => {
   mobileMenu.classList.toggle('show');
-  const open = mobileMenu.classList.contains('show');
-  mobileMenu.setAttribute('aria-hidden', String(!open));
 });
+
+// CSS tambahan untuk animasi
+.mobile-menu {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.25s ease;
+}
+.mobile-menu.show {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
 
 $$('.mobile-link').forEach(a => a.addEventListener('click', ()=> {
   mobileMenu.style.display = 'none';
@@ -197,6 +210,7 @@ document.addEventListener('keydown', (e) => {
     mobileMenu.style.display = 'none';
   }
 });
+
 
 
 
