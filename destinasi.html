@@ -7,46 +7,51 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header>
-    <h1>Wisata Banjarmasin</h1>
-    <div class="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="container navbar-container">
+      <h1 class="logo">Wisata Banjarmasin</h1>
+      <nav id="navbar">
+        <a href="index.html">Beranda</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="destinasi.html" class="active">Destinasi</a>
+        <a href="berita.html">Berita</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+      <button id="menu-toggle">&#9776;</button>
     </div>
-    <nav>
-      <a href="index.html">Beranda</a>
-      <a href="tentang.html">Tentang</a>
-      <a href="destinasi.html" class="active">Destinasi</a>
-      <a href="berita.html">Berita</a>
-      <a href="kontak.html">Kontak</a>
-    </nav>
   </header>
 
   <main>
-    <h2>Destinasi Wisata Populer</h2>
-    <div class="destinasi-grid">
-      <div class="card">
-        <h3>Pasar Terapung Lok Baintan</h3>
-        <p>Pasar tradisional di atas sungai, ikonik khas Banjarmasin.</p>
-        <a href="https://maps.google.com/?q=Pasar+Terapung+Lok+Baintan" target="_blank">Lihat di Maps</a>
+    <section class="content">
+      <h2>Destinasi Populer</h2>
+      <div class="destinations">
+        <div class="card" onclick="openMap('https://goo.gl/maps/XXXXX')">
+          <img src="img/pasar-terapung.jpg" alt="Pasar Terapung">
+          <div class="card-body">
+            <h3>Pasar Terapung</h3>
+            <p>Ikon wisata sungai di Banjarmasin dengan pengalaman belanja langsung dari perahu.</p>
+          </div>
+        </div>
+        <div class="card" onclick="openMap('https://goo.gl/maps/YYYYY')">
+          <img src="img/masjid-sabilal.jpg" alt="Masjid Raya Sabilal Muhtadin">
+          <div class="card-body">
+            <h3>Masjid Sabilal Muhtadin</h3>
+            <p>Masjid terbesar di Kalimantan Selatan dengan arsitektur megah.</p>
+          </div>
+        </div>
+        <div class="card" onclick="openMap('https://goo.gl/maps/ZZZZZ')">
+          <img src="img/pulau-kembang.jpg" alt="Pulau Kembang">
+          <div class="card-body">
+            <h3>Pulau Kembang</h3>
+            <p>Pulau wisata dengan habitat monyet ekor panjang dan keindahan alamnya.</p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <h3>Siring Tendean</h3>
-        <p>Wisata tepi sungai yang indah dengan spot foto menarik.</p>
-        <a href="https://maps.google.com/?q=Siring+Tendean+Banjarmasin" target="_blank">Lihat di Maps</a>
-      </div>
-      <div class="card">
-        <h3>Masjid Sultan Suriansyah</h3>
-        <p>Masjid bersejarah yang megah, peninggalan kerajaan Banjar.</p>
-        <a href="https://maps.google.com/?q=Masjid+Sultan+Suriansyah" target="_blank">Lihat di Maps</a>
-      </div>
-    </div>
+    </section>
   </main>
 
   <footer>
-    © 2025 Wisata Banjarmasin. All rights reserved.
+    <p>© 2025 Wisata Banjarmasin. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
