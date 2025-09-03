@@ -6,13 +6,13 @@
   <title>Wisata Banjarmasin - Beranda</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="beranda">
   <header>
     <div class="logo">Wisata Banjarmasin</div>
     <div class="menu-toggle" id="menu-toggle">☰</div>
     <nav id="navbar">
       <ul>
-        <li><a href="index.html">Beranda</a></li>
+        <li><a href="index.html" class="active">Beranda</a></li>
         <li><a href="tentang.html">Tentang</a></li>
         <li><a href="destinasi.html">Destinasi</a></li>
         <li><a href="berita.html">Berita</a></li>
@@ -21,6 +21,7 @@
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>Selamat Datang di Banjarmasin</h1>
@@ -29,6 +30,14 @@
     </div>
   </section>
 
+  <!-- Tentang Singkat -->
+  <section class="about-preview">
+    <h2>Sekilas Tentang Banjarmasin</h2>
+    <p>Banjarmasin dikenal sebagai kota seribu sungai yang menawarkan pesona budaya, sejarah, dan wisata alam. 
+    Website ini hadir sebagai panduan wisatawan untuk menemukan destinasi terbaik di kota ini.</p>
+  </section>
+
+  <!-- Destinasi Favorit -->
   <section class="destinasi">
     <h2>Destinasi Favorit</h2>
     <div class="grid">
@@ -45,6 +54,23 @@
     </div>
   </section>
 
+  <!-- Berita Singkat -->
+  <section class="berita-preview">
+    <h2>Berita Terkini</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Festival Sungai Banjarmasin 2025</h3>
+        <p>Festival tahunan yang menampilkan lomba perahu, kuliner khas, dan kesenian daerah.</p>
+        <a href="berita.html">Baca Selengkapnya</a>
+      </div>
+      <div class="card">
+        <h3>Wisata Kuliner Malam</h3>
+        <p>Menikmati sajian kuliner khas Banjar di tepian sungai yang ramai pengunjung.</p>
+        <a href="berita.html">Baca Selengkapnya</a>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <p>© 2025 Wisata Banjarmasin. All rights reserved.</p>
   </footer>
@@ -52,4 +78,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
