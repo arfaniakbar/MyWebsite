@@ -6,7 +6,7 @@ menuToggle.addEventListener("click", () => {
   navbar.style.display = navbar.style.display === "block" ? "none" : "block";
 });
 
-// Buka Google Maps dari destinasi
+// (Opsional) Buka Google Maps dari destinasi
 function openMap(url) {
   window.open(url, "_blank");
 }
