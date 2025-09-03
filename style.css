@@ -62,7 +62,7 @@ header nav ul li a.active {
 
 /* Hero */
 .hero {
-  background: url('https://upload.wikimedia.org/wikipedia/commons/6/68/Sungai_Martapura_Banjarmasin.jpg') no-repeat center center/cover;
+  background: url('images/background.png') no-repeat center center/cover;
   color: white;
   text-align: center;
   padding: 120px 20px;
@@ -228,3 +228,4 @@ footer {
     display: block;
   }
 }
+
