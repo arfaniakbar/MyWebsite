@@ -27,7 +27,7 @@
 
     /* === Header === */
     header {
-      background: #006666; /* hijau tua */
+      background: #006666;
       color: white;
       padding: 15px 20px;
       display: flex;
@@ -61,39 +61,80 @@
 
     /* === Detail Konten === */
     .detail-destinasi {
-      padding: 60px 20px;
-      max-width: 900px;
+      padding: 50px 20px;
+      max-width: 1000px;
       margin: auto;
-      text-align: center;
     }
 
     .detail-destinasi h2 {
-      font-size: 32px;
+      font-size: 34px;
       margin-bottom: 20px;
       color: #006666;
+      text-align: center;
     }
 
     .detail-destinasi img {
       width: 100%;
-      max-height: 400px;
+      max-height: 420px;
       object-fit: cover;
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       margin-bottom: 20px;
-      transition: transform 0.3s ease;
     }
 
-    .detail-destinasi img:hover {
-      transform: scale(1.02);
+    .detail-destinasi section {
+      margin-bottom: 35px;
+    }
+
+    .detail-destinasi h3 {
+      font-size: 22px;
+      color: #006666;
+      margin-bottom: 10px;
     }
 
     .detail-destinasi p {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       font-size: 17px;
       text-align: justify;
     }
 
-    .detail-destinasi .btn {
+    .detail-destinasi ul {
+      margin: 10px 0 20px 25px;
+    }
+
+    .detail-destinasi ul li {
+      margin-bottom: 8px;
+    }
+
+    .highlight {
+      background: #e0f2f1;
+      border-left: 5px solid #006666;
+      padding: 12px 18px;
+      margin: 20px 0;
+      border-radius: 6px;
+      font-style: italic;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .btn {
       display: inline-block;
       background: #006666;
       color: white;
@@ -104,12 +145,12 @@
       transition: background 0.3s, transform 0.2s;
     }
 
-    .detail-destinasi .btn:hover {
+    .btn:hover {
       background: #004d40;
       transform: translateY(-2px);
     }
 
-    /* === Footer === */
+    /* Footer */
     footer {
       background: #333;
       color: white;
@@ -117,22 +158,6 @@
       padding: 18px;
       font-size: 14px;
       margin-top: auto;
-    }
-
-    /* === MOBILE ADJUSTMENT === */
-    @media (max-width: 768px) {
-      header {
-        background: #006666;
-      }
-      .detail-destinasi h2 {
-        color: #006666;
-      }
-      .detail-destinasi .btn {
-        background: #006666;
-      }
-      .detail-destinasi .btn:hover {
-        background: #004d40;
-      }
     }
   </style>
 </head>
@@ -146,13 +171,49 @@
     <section class="detail-destinasi">
       <h2>Sungai Martapura</h2>
       <img src="../images/sungai.png" alt="Sungai Martapura">
-      <p>
-        Sungai Martapura adalah ikon utama Kota Banjarmasin. 
-        Di sini, pengunjung dapat menikmati wisata susur sungai, 
-        melihat aktivitas masyarakat di bantaran sungai, 
-        dan merasakan suasana khas kota seribu sungai.
-      </p>
-      <a href="https://maps.app.goo.gl/ZnLpo2UY4qkTovXa6" target="_blank" class="btn">📍 Lihat di Google Maps</a>
+
+      <section>
+        <h3>Tentang Sungai Martapura</h3>
+        <p>
+          Sungai Martapura adalah ikon utama Kota Banjarmasin. Di sepanjang sungai ini, 
+          pengunjung bisa merasakan suasana khas “Kota Seribu Sungai” dengan pemandangan 
+          perahu kelotok, pasar terapung, dan rumah-rumah lanting di bantaran sungai.
+        </p>
+      </section>
+
+      <section>
+        <h3>Daya Tarik</h3>
+        <ul>
+          <li>Wisata susur sungai dengan perahu kelotok.</li>
+          <li>Pemandangan lampu hias yang indah di malam hari.</li>
+          <li>Spot foto menarik di jembatan dan tepian sungai.</li>
+          <li>Kuliner khas Banjar di warung pinggir sungai.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Aktivitas yang Bisa Dilakukan</h3>
+        <p>
+          Pengunjung dapat menikmati perjalanan perahu, berfoto di jembatan, 
+          hingga menyusuri pasar terapung yang ikonik. Jangan lupa mencicipi 
+          makanan khas Banjar seperti soto banjar dan ketupat kandangan.
+        </p>
+        <div class="gallery">
+          <img src="../images/kelotok.jpg" alt="Perahu Kelotok">
+          <img src="../images/pasar.jpg" alt="Pasar Terapung">
+          <img src="../images/malam.jpg" alt="Lampu Malam Sungai">
+        </div>
+      </section>
+
+      <section>
+        <h3>Informasi Praktis</h3>
+        <div class="highlight">
+          Jam buka: 24 jam <br>
+          Tiket masuk: Gratis (biaya perahu mulai Rp 15.000/orang) <br>
+          Lokasi: Pusat Kota Banjarmasin
+        </div>
+        <a href="https://maps.app.goo.gl/ZnLpo2UY4qkTovXa6" target="_blank" class="btn">📍 Lihat di Google Maps</a>
+      </section>
     </section>
   </main>
 
