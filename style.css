@@ -131,8 +131,9 @@ h2 {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  cursor: pointer;
   transition: transform 0.3s;
+  text-align: center;
+  padding-bottom: 15px;
 }
 
 .card:hover {
@@ -151,9 +152,28 @@ h2 {
 }
 
 .card p {
-  padding: 0 10px 15px;
+  padding: 0 10px;
   font-size: 0.95rem;
   color: #555;
+  margin-bottom: 12px;
+}
+
+/* Tombol Selengkapnya */
+.card .selengkapnya {
+  display: inline-block;
+  background: #006666;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.card .selengkapnya:hover {
+  background: #004d4d;
+  transform: translateY(-2px);
 }
 
 /* Berita Terkini */
