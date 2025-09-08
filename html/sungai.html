@@ -25,17 +25,24 @@
       flex: 1;
     }
 
-    /* === Header === */
+    /* === Header / Navbar Detail === */
     header {
-      background: #006666;
+      background: linear-gradient(90deg, #006666, #008080);
       color: white;
       padding: 15px 20px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
       position: sticky;
       top: 0;
       z-index: 1000;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
     }
 
     .back-btn {
@@ -53,10 +60,41 @@
       background: rgba(255, 255, 255, 0.3);
     }
 
+    .breadcrumb a {
+      color: #ffd700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      margin: 0 3px;
+    }
+
+    .breadcrumb span {
+      font-size: 0.9rem;
+      color: #eee;
+    }
+
     .page-title {
-      margin: auto;
       font-size: 20px;
       font-weight: bold;
+    }
+
+    .right {
+      display: flex;
+      gap: 10px;
+    }
+
+    .icon-btn {
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .icon-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
     }
 
     /* === Detail Konten === */
@@ -64,6 +102,12 @@
       padding: 50px 20px;
       max-width: 1000px;
       margin: auto;
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .detail-destinasi h2 {
@@ -80,6 +124,11 @@
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       margin-bottom: 20px;
+      transition: transform 0.3s;
+    }
+
+    .detail-destinasi img:hover {
+      transform: scale(1.02);
     }
 
     .detail-destinasi section {
@@ -159,12 +208,38 @@
       font-size: 14px;
       margin-top: auto;
     }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .page-title {
+        font-size: 18px;
+      }
+      .right {
+        align-self: flex-end;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <a href="../destinasi.html" class="back-btn">← Kembali</a>
+    <div class="left">
+      <a href="../destinasi.html" class="back-btn">← Kembali</a>
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a> › 
+        <a href="../destinasi.html">Destinasi</a> › 
+        <span>Sungai Martapura</span>
+      </nav>
+    </div>
     <div class="page-title">Detail Wisata</div>
+    <div class="right">
+      <button class="icon-btn" onclick="window.open('https://maps.app.goo.gl/ZnLpo2UY4qkTovXa6','_blank')">📍 Peta</button>
+      <button class="icon-btn" onclick="navigator.clipboard.writeText(window.location.href);alert('Link disalin!')">🔗 Share</button>
+    </div>
   </header>
 
   <main>
