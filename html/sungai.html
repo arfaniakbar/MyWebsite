@@ -5,99 +5,124 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sungai Martapura - Wisata Banjarmasin</title>
   <style>
-    /* === Reset dasar === */
+    /* Reset dasar */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
     }
 
     /* === Header & Navbar === */
     header {
-      background: #006994;
+      background: linear-gradient(90deg, #006994, #0088cc);
       color: white;
-      padding: 15px 20px;
+      padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .logo {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: bold;
+      letter-spacing: 1px;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 20px;
+      gap: 25px;
     }
 
     nav ul li a {
       color: white;
       text-decoration: none;
       font-weight: 500;
+      transition: color 0.3s, border-bottom 0.3s;
+      padding-bottom: 4px;
     }
 
-    nav ul li a.active,
-    nav ul li a:hover {
-      text-decoration: underline;
+    nav ul li a:hover,
+    nav ul li a.active {
+      border-bottom: 2px solid #ffdd57;
+      color: #ffdd57;
     }
 
     /* === Halaman Detail Destinasi === */
     .detail-destinasi {
-      padding: 40px 20px;
-      max-width: 800px;
+      padding: 60px 20px;
+      max-width: 900px;
       margin: auto;
+      text-align: center;
     }
 
     .detail-destinasi h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
+      font-size: 32px;
+      margin-bottom: 20px;
       color: #006994;
     }
 
     .detail-destinasi img {
       width: 100%;
-      max-height: 350px;
+      max-height: 400px;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .detail-destinasi img:hover {
+      transform: scale(1.02);
     }
 
     .detail-destinasi p {
-      margin-bottom: 15px;
-      line-height: 1.6;
+      margin-bottom: 20px;
+      font-size: 17px;
+      text-align: justify;
     }
 
     .detail-destinasi .btn {
       display: inline-block;
       background: #006994;
       color: white;
-      padding: 10px 18px;
+      padding: 12px 22px;
       border-radius: 6px;
       text-decoration: none;
-      transition: background 0.2s ease-in-out;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
     }
 
     .detail-destinasi .btn:hover {
       background: #004d6d;
+      transform: translateY(-2px);
     }
 
     /* === Footer === */
     footer {
-      background: #f1f1f1;
+      background: #006994;
+      color: white;
       text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+      padding: 18px;
+      margin-top: 50px;
       font-size: 14px;
     }
 
     /* === Responsive Navbar (Mobile) === */
     .menu-toggle {
       display: none;
-      font-size: 22px;
+      font-size: 26px;
       cursor: pointer;
     }
 
@@ -107,10 +132,12 @@
         flex-direction: column;
         background: #006994;
         position: absolute;
-        top: 60px;
+        top: 65px;
         right: 0;
-        width: 200px;
-        padding: 10px;
+        width: 220px;
+        padding: 15px;
+        box-shadow: -2px 4px 8px rgba(0,0,0,0.2);
+        border-radius: 0 0 8px 8px;
       }
 
       nav ul.show {
@@ -141,11 +168,12 @@
     <h2>Sungai Martapura</h2>
     <img src="images/sungai.png" alt="Sungai Martapura">
     <p>
-      Sungai Martapura adalah ikon utama Kota Banjarmasin.  
-      Di sini, pengunjung dapat menikmati wisata susur sungai, melihat aktivitas masyarakat di bantaran sungai, 
+      Sungai Martapura adalah ikon utama Kota Banjarmasin. 
+      Di sini, pengunjung dapat menikmati wisata susur sungai, 
+      melihat aktivitas masyarakat di bantaran sungai, 
       dan merasakan suasana khas kota seribu sungai.
     </p>
-    <a href="https://maps.app.goo.gl/ZnLpo2UY4qkTovXa6" target="_blank" class="btn">Lihat di Google Maps</a>
+    <a href="https://maps.app.goo.gl/ZnLpo2UY4qkTovXa6" target="_blank" class="btn">📍 Lihat di Google Maps</a>
   </section>
 
   <footer>
