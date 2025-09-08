@@ -19,20 +19,19 @@
       line-height: 1.6;
       display: flex;
       flex-direction: column;
-      min-height: 100vh; /* agar footer tetap di bawah */
+      min-height: 100vh;
     }
 
     main {
-      flex: 1; /* isi halaman mendorong footer */
+      flex: 1;
     }
 
-    /* === Header & Navbar === */
+    /* === Header / Back Button === */
     header {
       background: linear-gradient(90deg, #006994, #0088cc);
       color: white;
-      padding: 15px 30px;
+      padding: 15px 20px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
       position: sticky;
@@ -40,30 +39,25 @@
       z-index: 1000;
     }
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-    }
-
-    nav ul li a {
-      color: white;
+    .back-btn {
       text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s, border-bottom 0.3s;
-      padding-bottom: 4px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background 0.3s;
     }
 
-    nav ul li a:hover,
-    nav ul li a.active {
-      border-bottom: 2px solid #ffdd57;
-      color: #ffdd57;
+    .back-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .page-title {
+      margin: auto;
+      font-size: 20px;
+      font-weight: bold;
     }
 
     /* === Halaman Detail Destinasi === */
@@ -123,54 +117,14 @@
       text-align: center;
       padding: 18px;
       font-size: 14px;
-      margin-top: auto; /* selalu di bawah */
-    }
-
-    /* === Responsive Navbar (Mobile) === */
-    .menu-toggle {
-      display: none;
-      font-size: 28px;
-      cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background: #006994;
-        position: absolute;
-        top: 65px;
-        right: 0;
-        width: 220px;
-        padding: 15px;
-        box-shadow: -2px 4px 8px rgba(0,0,0,0.2);
-        border-radius: 0 0 8px 8px;
-        text-align: right; /* biar rata kanan */
-      }
-
-      nav ul.show {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-        color: white;
-      }
+      margin-top: auto;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">Wisata Banjarmasin</div>
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-    <nav id="navbar">
-      <ul>
-        <li><a href="../index.html">Beranda</a></li>
-        <li><a href="../tentang.html">Tentang</a></li>
-        <li><a href="destinasi.html" class="active">Destinasi</a></li>
-        <li><a href="../kontak.html">Kontak</a></li>
-      </ul>
-    </nav>
+    <a href="../destinasi.html" class="back-btn">← Kembali</a>
+    <div class="page-title">Detail Wisata</div>
   </header>
 
   <main>
@@ -183,22 +137,12 @@
         melihat aktivitas masyarakat di bantaran sungai, 
         dan merasakan suasana khas kota seribu sungai.
       </p>
-      <a href="https://maps.app.goo.gl/ZnLpo2UY4qkTovXa6" target="_blank" class="btn">Lihat di Google Maps</a>
+      <a href="https://maps.app.goo.gl/ZnLpo2UY4qkTovXa6" target="_blank" class="btn">📍 Lihat di Google Maps</a>
     </section>
   </main>
 
   <footer>
     <p>© 2025 Wisata Banjarmasin. All rights reserved.</p>
   </footer>
-
-  <script>
-    // Toggle menu untuk mobile
-    const menuToggle = document.getElementById("menu-toggle");
-    const navbar = document.getElementById("navbar");
-    menuToggle.addEventListener("click", () => {
-      navbar.querySelector("ul").classList.toggle("show");
-    });
-  </script>
 </body>
 </html>
-
