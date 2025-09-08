@@ -17,6 +17,13 @@
       background: #f9f9f9;
       color: #333;
       line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* agar footer tetap di bawah */
+    }
+
+    main {
+      flex: 1; /* isi halaman mendorong footer */
     }
 
     /* === Header & Navbar === */
@@ -115,14 +122,14 @@
       color: white;
       text-align: center;
       padding: 18px;
-      margin-top: 50px;
       font-size: 14px;
+      margin-top: auto; /* selalu di bawah */
     }
 
     /* === Responsive Navbar (Mobile) === */
     .menu-toggle {
       display: none;
-      font-size: 26px;
+      font-size: 28px;
       cursor: pointer;
     }
 
@@ -138,6 +145,7 @@
         padding: 15px;
         box-shadow: -2px 4px 8px rgba(0,0,0,0.2);
         border-radius: 0 0 8px 8px;
+        text-align: right; /* biar rata kanan */
       }
 
       nav ul.show {
@@ -146,6 +154,7 @@
 
       .menu-toggle {
         display: block;
+        color: white;
       }
     }
   </style>
@@ -164,17 +173,19 @@
     </nav>
   </header>
 
-  <section class="detail-destinasi">
-    <h2>Sungai Martapura</h2>
-    <img src="images/sungai.png" alt="Sungai Martapura">
-    <p>
-      Sungai Martapura adalah ikon utama Kota Banjarmasin. 
-      Di sini, pengunjung dapat menikmati wisata susur sungai, 
-      melihat aktivitas masyarakat di bantaran sungai, 
-      dan merasakan suasana khas kota seribu sungai.
-    </p>
-    <a href="https://maps.app.goo.gl/ZnLpo2UY4qkTovXa6" target="_blank" class="btn">📍 Lihat di Google Maps</a>
-  </section>
+  <main>
+    <section class="detail-destinasi">
+      <h2>Sungai Martapura</h2>
+      <img src="images/sungai.png" alt="Sungai Martapura">
+      <p>
+        Sungai Martapura adalah ikon utama Kota Banjarmasin. 
+        Di sini, pengunjung dapat menikmati wisata susur sungai, 
+        melihat aktivitas masyarakat di bantaran sungai, 
+        dan merasakan suasana khas kota seribu sungai.
+      </p>
+      <a href="https://maps.app.goo.gl/ZnLpo2UY4qkTovXa6" target="_blank" class="btn">📍 Lihat di Google Maps</a>
+    </section>
+  </main>
 
   <footer>
     <p>© 2025 Wisata Banjarmasin. All rights reserved.</p>
