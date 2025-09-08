@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sungai Martapura - Wisata Banjarmasin</title>
   <style>
-    /* Reset dasar */
     * {
       margin: 0;
       padding: 0;
@@ -26,7 +25,7 @@
       flex: 1;
     }
 
-    /* === Header / Back Button === */
+    /* === Header === */
     header {
       background: #00695c; /* hijau tua */
       color: white;
@@ -60,7 +59,7 @@
       font-weight: bold;
     }
 
-    /* === Halaman Detail Destinasi === */
+    /* === Detail Konten === */
     .detail-destinasi {
       padding: 60px 20px;
       max-width: 900px;
@@ -71,7 +70,7 @@
     .detail-destinasi h2 {
       font-size: 32px;
       margin-bottom: 20px;
-      color: #00695c; /* hijau tua */
+      color: #00695c;
     }
 
     .detail-destinasi img {
@@ -96,7 +95,7 @@
 
     .detail-destinasi .btn {
       display: inline-block;
-      background: #00695c; /* hijau tua */
+      background: #00695c;
       color: white;
       padding: 12px 22px;
       border-radius: 6px;
@@ -112,12 +111,28 @@
 
     /* === Footer === */
     footer {
-      background: #333; /* abu gelap */
+      background: #333;
       color: white;
       text-align: center;
       padding: 18px;
       font-size: 14px;
       margin-top: auto;
+    }
+
+    /* === MOBILE ADJUSTMENT === */
+    @media (max-width: 768px) {
+      header {
+        background: #00897b; /* hijau lebih terang */
+      }
+      .detail-destinasi h2 {
+        color: #00897b;
+      }
+      .detail-destinasi .btn {
+        background: #00897b;
+      }
+      .detail-destinasi .btn:hover {
+        background: #00796b;
+      }
     }
   </style>
 </head>
