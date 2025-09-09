@@ -5,8 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sungai Martapura - Wisata Banjarmasin</title>
   <style>
-    body { font-family: "Segoe UI", Arial, sans-serif; margin:0; }
+    body { 
+      font-family: "Segoe UI", Arial, sans-serif; 
+      margin:0; padding:0; 
+      background:#f9f9f9;
+      color:#333;
+    }
 
+    /* ===== HEADER & NAVBAR ===== */
     header {
       background: linear-gradient(90deg, #006666, #008080);
       color: white;
@@ -14,42 +20,133 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top:0;
+      z-index:1000;
     }
 
-    .back-btn {
+    .logo {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
       text-decoration: none;
       color: white;
-      font-weight: bold;
-      background: rgba(255,255,255,0.15);
-      padding: 8px 14px;
-      border-radius: 6px;
+      font-weight: 500;
+      transition: color 0.3s;
     }
 
-    .icon-btn {
-      background: rgba(255,255,255,0.15);
-      border: none;
-      padding: 8px 12px;
-      border-radius: 6px;
-      color: white;
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #ffd700;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 22px;
       cursor: pointer;
     }
 
-    /* Popup Share */
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        width: 100%;
+        background: #006666;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      nav ul li {
+        margin: 10px 0;
+        text-align: center;
+      }
+      nav ul li a {
+        display: block;
+        padding: 10px;
+      }
+      nav.show {
+        display: block;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    /* ===== CONTENT ===== */
+    .content {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .content img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .content h2 {
+      text-align: center;
+      color: #006666;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    /* ===== SHARE BUTTON ===== */
+    .share-container {
+      text-align: right;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .icon-btn {
+      background: rgba(0,0,0,0.1);
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      color: #006666;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
     .share-menu {
       display: none;
       position: absolute;
-      top: 55px;
-      right: 20px;
+      right: 0;
       background: white;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       overflow: hidden;
       z-index: 1000;
       animation: fadeIn 0.3s;
+      min-width: 180px;
     }
 
     .share-menu a, .share-menu button {
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 10px;
       padding: 10px 15px;
       color: #333;
       text-decoration: none;
@@ -66,65 +163,105 @@
       background: #f0f0f0;
     }
 
+    .share-menu img {
+      width: 20px;
+      height: 20px;
+    }
+
     @keyframes fadeIn {
       from {opacity:0; transform:translateY(-5px);}
       to {opacity:1; transform:translateY(0);}
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #006666;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      position: relative;
     }
   </style>
 </head>
 <body>
   <header>
-    <a href="../destinasi.html" class="back-btn">← Kembali</a>
-    <button class="icon-btn" id="shareBtn">🔗 Share</button>
-    <div class="share-menu" id="shareMenu">
-      <a href="#" id="waShare">📱 WhatsApp</a>
-      <a href="#" id="igShare">📸 Instagram</a>
-      <button id="copyLink">📋 Salin Link</button>
-    </div>
+    <div class="logo">Wisata Banjarmasin</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="navbar">
+      <ul>
+        <li><a href="../index.html">Beranda</a></li>
+        <li><a href="../tentang.html">Tentang</a></li>
+        <li><a href="../destinasi.html" class="active">Destinasi</a></li>
+        <li><a href="../kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <h2 style="text-align:center;margin:40px 0;color:#006666;">Sungai Martapura</h2>
-    <p style="max-width:800px;margin:auto;padding:0 20px;text-align:justify;">
-      Sungai Martapura adalah ikon utama Kota Banjarmasin. Di sepanjang sungai ini, 
+  <div class="content">
+    <img src="../images/sungai.png" alt="Sungai Martapura">
+    <h2>Sungai Martapura</h2>
+    <p>
+      Sungai Martapura adalah salah satu ikon utama Kota Banjarmasin. Di sepanjang sungai ini, 
       pengunjung bisa merasakan suasana khas “Kota Seribu Sungai” dengan pemandangan 
-      perahu kelotok, pasar terapung, dan rumah-rumah lanting di bantaran sungai.
+      perahu kelotok, pasar terapung, serta rumah-rumah lanting yang berdiri di bantaran sungai.
     </p>
-  </main>
+
+    <div class="share-container">
+      <button class="icon-btn" id="shareBtn">🔗 Bagikan</button>
+      <div class="share-menu" id="shareMenu">
+        <a href="#" id="waShare">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"> WhatsApp
+        </a>
+        <a href="#" id="igShare">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"> Instagram
+        </a>
+        <button id="copyLink">
+          <img src="https://cdn-icons-png.flaticon.com/512/724/724933.png" alt="Copy"> Salin Link
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Wisata Banjarmasin. All rights reserved.</p>
+  </footer>
 
   <script>
+    // Toggle navbar
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
+    menuToggle.addEventListener("click", () => {
+      navbar.classList.toggle("show");
+    });
+
+    // Share button
     const shareBtn = document.getElementById("shareBtn");
     const shareMenu = document.getElementById("shareMenu");
     const copyLink = document.getElementById("copyLink");
     const waShare = document.getElementById("waShare");
     const igShare = document.getElementById("igShare");
-
     const currentUrl = window.location.href;
 
-    // Buka/Tutup Menu
     shareBtn.addEventListener("click", () => {
       shareMenu.style.display = shareMenu.style.display === "block" ? "none" : "block";
     });
 
-    // WhatsApp
     waShare.addEventListener("click", () => {
       window.open(`https://wa.me/?text=${encodeURIComponent("Lihat wisata Sungai Martapura: " + currentUrl)}`, "_blank");
     });
 
-    // Instagram (hanya bisa buka Instagram, tidak bisa auto-share di web)
     igShare.addEventListener("click", () => {
       window.open("https://www.instagram.com/", "_blank");
       alert("Silakan paste link yang sudah disalin ke Instagram.");
     });
 
-    // Salin Link
     copyLink.addEventListener("click", () => {
       navigator.clipboard.writeText(currentUrl).then(() => {
         alert("Link berhasil disalin!");
       });
     });
 
-    // Klik di luar menu untuk menutup
     window.addEventListener("click", (e) => {
       if (!shareBtn.contains(e.target) && !shareMenu.contains(e.target)) {
         shareMenu.style.display = "none";
