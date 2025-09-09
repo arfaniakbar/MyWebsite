@@ -25,23 +25,19 @@
       flex: 1;
     }
 
-    /* === Header / Navbar === */
+    /* === Header === */
     header {
-      background: rgba(0, 102, 102, 0.9);
-      backdrop-filter: blur(10px);
+      background: linear-gradient(90deg, #006666, #008080);
       color: white;
       padding: 12px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       position: sticky;
       top: 0;
       z-index: 1000;
-      transition: top 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    header.scrolled {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: top 0.3s ease;
     }
 
     .back-btn {
@@ -62,7 +58,7 @@
     .icon-btn {
       background: rgba(255,255,255,0.15);
       border: none;
-      padding: 8px 14px;
+      padding: 8px 12px;
       border-radius: 6px;
       color: #fff;
       font-size: 0.9rem;
@@ -83,13 +79,13 @@
       display: none;
       position: absolute;
       right: 0;
-      top: 45px;
+      top: 40px;
       background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       overflow: hidden;
       z-index: 2000;
-      min-width: 190px;
+      min-width: 180px;
       animation: fadeIn 0.3s;
     }
 
@@ -98,7 +94,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 12px 15px;
+      padding: 10px 15px;
       color: #333;
       text-decoration: none;
       border-bottom: 1px solid #eee;
@@ -128,13 +124,13 @@
     /* === Detail Konten === */
     .detail-destinasi {
       padding: 50px 20px;
-      max-width: 1100px;
+      max-width: 1000px;
       margin: auto;
       animation: fadeIn 0.8s ease;
     }
 
     .detail-destinasi h2 {
-      font-size: 32px;
+      font-size: 34px;
       margin-bottom: 20px;
       color: #006666;
       text-align: center;
@@ -178,32 +174,41 @@
       margin-bottom: 8px;
     }
 
+    .highlight, .highlight-box {
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin: 15px 0 25px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
     .highlight {
       background: #e0f2f1;
       border-left: 5px solid #006666;
-      padding: 12px 18px;
-      margin: 20px 0;
-      border-radius: 6px;
       font-style: italic;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 15px;
-      margin-top: 15px;
+    .highlight-box {
+      background: #f1f8e9;
+      border-left: 5px solid #4caf50;
     }
 
-    .gallery img {
-      width: 100%;
-      height: 170px;
-      object-fit: cover;
+    .highlight-box ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .highlight-box li {
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .tips-box {
+      background: #fff8e1;
+      border-left: 5px solid #ff9800;
+      padding: 15px 20px;
       border-radius: 8px;
-      transition: transform 0.3s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
+      margin: 15px 0 25px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .btn {
@@ -230,27 +235,6 @@
       padding: 18px;
       font-size: 14px;
       margin-top: auto;
-    }
-
-    /* Mobile Optimisasi */
-    @media (max-width: 600px) {
-      .detail-destinasi {
-        padding: 30px 15px;
-      }
-
-      .detail-destinasi h2 {
-        font-size: 26px;
-      }
-
-      .gallery {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .btn {
-        display: block;
-        text-align: center;
-        margin: 15px auto 0;
-      }
     }
   </style>
 </head>
@@ -291,25 +275,25 @@
 
       <section>
         <h3>Daya Tarik</h3>
-        <ul>
-          <li>Wisata susur sungai dengan perahu kelotok.</li>
-          <li>Pemandangan lampu hias yang indah di malam hari.</li>
-          <li>Spot foto menarik di jembatan dan tepian sungai.</li>
-          <li>Kuliner khas Banjar di warung pinggir sungai.</li>
-        </ul>
+        <div class="highlight-box">
+          <ul>
+            <li>Wisata susur sungai dengan perahu kelotok.</li>
+            <li>Pemandangan lampu hias yang indah di malam hari.</li>
+            <li>Spot foto menarik di jembatan dan tepian sungai.</li>
+            <li>Kuliner khas Banjar di warung pinggir sungai.</li>
+          </ul>
+        </div>
       </section>
 
       <section>
-        <h3>Aktivitas yang Bisa Dilakukan</h3>
-        <p>
-          Pengunjung dapat menikmati perjalanan perahu, berfoto di jembatan, 
-          hingga menyusuri pasar terapung yang ikonik. Jangan lupa mencicipi 
-          makanan khas Banjar seperti soto banjar dan ketupat kandangan.
-        </p>
-        <div class="gallery">
-          <img src="../images/kelotok.jpg" alt="Perahu Kelotok">
-          <img src="../images/pasar.jpg" alt="Pasar Terapung">
-          <img src="../images/malam.jpg" alt="Lampu Malam Sungai">
+        <h3>Tips Berkunjung</h3>
+        <div class="tips-box">
+          <ul>
+            <li>Datang sore menjelang malam untuk menikmati lampu hias.</li>
+            <li>Bawa kamera karena banyak spot foto menarik.</li>
+            <li>Coba naik perahu kelotok di pagi hari untuk suasana segar.</li>
+            <li>Siapkan uang tunai untuk jajan di warung pinggir sungai.</li>
+          </ul>
         </div>
       </section>
 
@@ -377,14 +361,9 @@
       let currentScrollPos = window.pageYOffset;
 
       if (prevScrollPos < currentScrollPos) {
-        header.style.top = "-80px"; // sembunyikan
+        header.style.top = "-80px";
       } else {
-        header.style.top = "0"; // tampilkan
-        header.classList.add("scrolled");
-      }
-
-      if (currentScrollPos === 0) {
-        header.classList.remove("scrolled");
+        header.style.top = "0";
       }
 
       prevScrollPos = currentScrollPos;
