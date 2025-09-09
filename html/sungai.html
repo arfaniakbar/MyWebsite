@@ -25,11 +25,12 @@
       flex: 1;
     }
 
-    /* === Header / Navbar Detail === */
+    /* === Header / Navbar === */
     header {
-      background: linear-gradient(90deg, #006666, #008080);
+      background: rgba(0, 102, 102, 0.95);
+      backdrop-filter: blur(6px);
       color: white;
-      padding: 15px 20px;
+      padding: 12px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -37,12 +38,13 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      border-bottom: 2px solid #004d40;
     }
 
-    .left {
+    .nav-left, .nav-right {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 10px;
     }
 
     .back-btn {
@@ -60,28 +62,6 @@
       background: rgba(255, 255, 255, 0.3);
     }
 
-    .breadcrumb a {
-      color: #ffd700;
-      font-size: 0.9rem;
-      text-decoration: none;
-      margin: 0 3px;
-    }
-
-    .breadcrumb span {
-      font-size: 0.9rem;
-      color: #eee;
-    }
-
-    .page-title {
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .right {
-      display: flex;
-      gap: 10px;
-    }
-
     .icon-btn {
       background: rgba(255, 255, 255, 0.15);
       border: none;
@@ -97,9 +77,25 @@
       background: rgba(255, 255, 255, 0.3);
     }
 
+    /* === Breadcrumb === */
+    .breadcrumb {
+      margin: 20px 0;
+      font-size: 0.9rem;
+    }
+
+    .breadcrumb a {
+      color: #006666;
+      text-decoration: none;
+      margin: 0 3px;
+    }
+
+    .breadcrumb span {
+      color: #555;
+    }
+
     /* === Detail Konten === */
     .detail-destinasi {
-      padding: 50px 20px;
+      padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
       animation: fadeIn 0.8s ease;
@@ -212,31 +208,19 @@
     /* Responsive */
     @media (max-width: 768px) {
       header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-      .page-title {
-        font-size: 18px;
-      }
-      .right {
-        align-self: flex-end;
+        flex-direction: row;
+        justify-content: space-between;
       }
     }
   </style>
 </head>
 <body>
+  <!-- Navbar -->
   <header>
-    <div class="left">
+    <div class="nav-left">
       <a href="../destinasi.html" class="back-btn">← Kembali</a>
-      <nav class="breadcrumb">
-        <a href="../index.html">Home</a> › 
-        <a href="../destinasi.html">Destinasi</a> › 
-        <span>Sungai Martapura</span>
-      </nav>
     </div>
-    <div class="page-title">Detail Wisata</div>
-    <div class="right">
+    <div class="nav-right">
       <button class="icon-btn" onclick="window.open('https://maps.app.goo.gl/ZnLpo2UY4qkTovXa6','_blank')">📍 Peta</button>
       <button class="icon-btn" onclick="navigator.clipboard.writeText(window.location.href);alert('Link disalin!')">🔗 Share</button>
     </div>
@@ -244,6 +228,13 @@
 
   <main>
     <section class="detail-destinasi">
+      <!-- Breadcrumb pindah ke sini -->
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a> › 
+        <a href="../destinasi.html">Destinasi</a> › 
+        <span>Sungai Martapura</span>
+      </nav>
+
       <h2>Sungai Martapura</h2>
       <img src="../images/sungai1.png" alt="Sungai Martapura">
 
