@@ -19,11 +19,9 @@ window.addEventListener("scroll", () => {
   let currentScrollPos = window.pageYOffset;
 
   if (prevScrollPos < currentScrollPos) {
-    // scroll ke bawah -> sembunyikan navbar
-    header.style.top = "-80px"; 
+    header.style.top = "-80px"; // sembunyi
   } else {
-    // scroll ke atas -> munculkan navbar
-    header.style.top = "0";
+    header.style.top = "0"; // muncul lagi
   }
 
   prevScrollPos = currentScrollPos;
