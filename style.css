@@ -252,7 +252,7 @@ footer {
     top: 60px;
     right: 0;
     background: #006666;
-    width: 220px;
+    width: 180px;
     border-radius: 0 0 8px 8px;
   }
 
@@ -269,3 +269,4 @@ footer {
     display: block;
   }
 }
+
