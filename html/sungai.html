@@ -37,6 +37,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      transition: top 0.3s ease; /* animasi hide/show */
     }
 
     .back-btn {
@@ -341,6 +342,22 @@
       if (!shareBtn.contains(e.target) && !shareMenu.contains(e.target)) {
         shareMenu.style.display = "none";
       }
+    });
+
+    // Navbar hide on scroll down, show on scroll up
+    let prevScrollPos = window.pageYOffset;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", () => {
+      let currentScrollPos = window.pageYOffset;
+
+      if (prevScrollPos < currentScrollPos) {
+        header.style.top = "-80px"; // sembunyikan
+      } else {
+        header.style.top = "0"; // tampilkan
+      }
+
+      prevScrollPos = currentScrollPos;
     });
   </script>
 </body>
