@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -26,7 +27,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: top 0.3s ease; /* supaya animasi halus */
+  transition: top 0.3s ease;
 }
 
 header .logo {
@@ -63,18 +64,19 @@ header nav ul li a.active {
 
 /* Hero Section */
 .hero {
-  background: url('images/background.png') no-repeat center center/cover;
+  background: url('images/background.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; /* biar full di desktop */
   color: white;
   text-align: center;
   position: relative;
-
-  /* ini penting biar full screen */
   min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .hero::after {
@@ -238,8 +240,6 @@ h2 {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-
-  /* animasi masuk */
   opacity: 0;
   animation: fadeSlideUp 0.8s ease forwards;
 }
@@ -301,13 +301,15 @@ footer {
 
 /* Responsif Hero */
 @media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll; /* supaya lancar di HP */
+  }
+
   .hero-content h1 {
     font-size: 2rem;
   }
+
   .hero-content p {
     font-size: 1rem;
   }
 }
-
-
-
