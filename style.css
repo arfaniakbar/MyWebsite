@@ -63,7 +63,8 @@ header nav ul li a.active {
 
 /* Hero Section */
 .hero {
-  height: 100vh; /* selalu penuh 1 layar */
+  min-height: 100vh; /* memastikan penuh 1 layar */
+  width: 100%;
   background: url('images/background.png') no-repeat center center/cover;
   display: flex;
   align-items: center;
@@ -72,7 +73,6 @@ header nav ul li a.active {
   color: white;
   position: relative;
   overflow: hidden;
-  animation: bgZoom 20s ease-in-out infinite alternate;
 }
 
 .hero::after {
@@ -87,6 +87,8 @@ header nav ul li a.active {
   position: relative;
   z-index: 2;
   max-width: 700px;
+  min-height: 100vh;
+  padding-top: 80px; /* sesuaikan tinggi navbar */
   padding: 0 20px;
   animation: fadeUp 1.5s ease;
 }
@@ -308,4 +310,5 @@ footer {
     font-size: 1rem;
   }
 }
+
 
